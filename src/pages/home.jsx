@@ -108,11 +108,11 @@ function Home() {
           </div>
         </section>
 
-        <section id="Prestasi">
+        {/* <section id="Prestasi">
           <div className="container mx-auto" data-aos="fade-up">
             <Prestasi />
           </div>
-        </section>
+        </section> */}
         <Footer />
       </main>
     </div>
