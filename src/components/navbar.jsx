@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { HashLink as Link } from 'react-router-hash-link';
 import React, { useEffect, useState } from "react";
 import { MdMenu, MdClose } from "react-icons/md";
 
@@ -27,7 +27,7 @@ function Navbar() {
     >
       <div className="container mx-auto flex justify-between items-center">
         <div className="ml-1 flex items-center">
-          <h1 className="text-2xl ml-12 md:text-3xl font-bold">
+          <h1 className="text-2xl ml-1 md:ml-12 md:text-3xl font-bold">
             <span className="text-red-500">MTS</span> AL-Manar
           </h1>
         </div>
@@ -41,12 +41,12 @@ function Navbar() {
         <nav
           className={`${
             menuOpen ? "block" : "hidden"
-          } md:block absolute md:relative top-16 md:right-10 right-0 w-full md:w-auto bg-slate-700 md:bg-transparent md:top-0 transition-all duration-300`}
+          } md:block absolute md:relative top-16 md:right-10 mr-10 w-full md:w-auto bg-slate-700 md:bg-transparent md:top-0 transition-all duration-300`}
         >
           <ul className="flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0 p-4 md:p-0">
             <li>
               <Link
-                to="/"
+                smooth to="/#"
                 className="transition-colors duration-300 font-sans md:font-serif hover:underline hover:underline-offset-4 hover:decoration-red-600"
               >
                 Beranda
@@ -54,7 +54,7 @@ function Navbar() {
             </li>
             <li>
               <Link
-                to="#profile"
+                smooth to="/#Profile"
                 className="transition-colors duration-300 hover:underline hover:underline-offset-4 hover:decoration-red-600"
               >
                 Profile
@@ -62,7 +62,7 @@ function Navbar() {
             </li>
             <li>
               <Link
-                to="#contact"
+                smooth to="/#Kegiatan"
                 className="transition-colors duration-300 hover:underline hover:underline-offset-4 hover:decoration-red-600"
               >
                 Kegiatan
@@ -70,7 +70,7 @@ function Navbar() {
             </li>
             <li>
               <Link
-                to="#news"
+                smooth to="/Pengumuman"
                 className="transition-colors duration-300 hover:underline hover:underline-offset-4 hover:decoration-red-600"
               >
                 Pengumuman
@@ -78,7 +78,7 @@ function Navbar() {
             </li>
             <li>
               <Link
-                to="#services"
+                smooth to="/#Prestasi"
                 className="transition-colors duration-300 hover:underline hover:underline-offset-4 hover:decoration-red-600"
               >
                 Prestasi
@@ -86,7 +86,7 @@ function Navbar() {
             </li>
             <li>
               <Link
-                to="#faq"
+                smooth to="/#faq"
                 className="transition-colors duration-300 hover:underline hover:underline-offset-4 hover:decoration-red-600"
               >
                 FAQ
